@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_price"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="?pageBackground"
+    tools:context="com.codepath.project.android.activities.PriceActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        app:theme="@style/ToolbarColoredBackArrow"
+        android:titleTextColor="@color/white"
+        style="@style/custom_toolbar"
+        android:background="@color/colorPrimary"/>
+    <com.codepath.project.android.views.QuestTextView
+        android:id="@+id/tvProductName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:paddingTop="20dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="10dp"
+        android:ellipsize="end"
+        android:paddingLeft="15dp"
+        style="?textSubheader"
+        android:layout_below="@id/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvProductName"
+        android:id="@+id/ll"
+        android:orientation="horizontal"
+        style="?pageBackground">
+        <com.codepath.project.android.views.QuestTextView
+            android:id="@+id/tvProductPriceTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:paddingTop="15dp"
+            android:textColor="@color/colorPrimary"
+            android:paddingBottom="20dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:paddingLeft="15dp"
+            android:text="Current Price: " />
+
+        <com.codepath.project.android.views.QuestTextView
+            android:id="@+id/tvProductPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:paddingTop="5dp"
+            style="?textSubheader"
+            android:paddingBottom="20dp"
+            android:paddingRight="10dp"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:layout_alignBaseline="@id/tvProductPriceTag"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="5dp"
+            android:layout_below="@id/tvProductName" />
+
+    </LinearLayout>
+
+    <com.codepath.project.android.views.QuestTextView
+        android:paddingTop="30dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:id="@+id/tvPriceTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?textRegular"
+        android:layout_below="@id/ll"
+        android:textSize="13sp"
+        android:text="PRICE" />
+    <EditText
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="20sp"
+        android:id="@+id/etPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Price"
+        android:inputType="number"
+        android:fontFamily="sans-serif-light"
+        android:layout_below="@id/tvPriceTitle"
+        android:textColorHint="@color/action_gray" />
+    <com.codepath.project.android.views.QuestTextView
+        android:paddingTop="30dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:id="@+id/tvStoreTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        style="?textRegular"
+        android:layout_below="@id/etPrice"
+        android:textSize="13sp"
+        android:text="STORE" />
+    <EditText
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="15dp"
+        android:id="@+id/etStore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Store Name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_below="@id/tvStoreTitle"
+        android:textColorHint="@color/action_gray" />
+    <com.codepath.project.android.views.QuestTextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/tvAddPrice"
+        android:onClick="onSubmitPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding = "20dp"
+        android:textAllCaps="true"
+        android:background="@color/colorPrimary"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/submit_price" />
+</RelativeLayout>

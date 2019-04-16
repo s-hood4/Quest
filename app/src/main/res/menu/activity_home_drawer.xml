@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group1">
+        <item
+            android:id="@+id/nav_home"
+            android:checked="true"
+            android:title="Home"
+            android:icon="@drawable/ic_home"/>
+        <item
+            android:id="@+id/nav_feed"
+            android:title="Feed"
+            android:icon="@drawable/ic_feed"/>
+        <item
+            android:id="@+id/nav_my_products"
+            android:title="My Products"
+            android:icon="@drawable/ic_myproducts"/>
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/group2">
+        <item
+            android:id="@+id/nav_about_me"
+            android:title="About me"
+            android:icon="@drawable/ic_aboutme"/>
+        <item
+            android:id="@+id/nav_settings"
+            android:title="Settings"
+            android:icon="@drawable/ic_settings"/>
+        <item
+            android:id="@+id/nav_logout"
+            android:title="Log out"
+            android:icon="@drawable/ic_logout"/>
+    </group>
+
+    <item android:id="@+id/nav_switch"
+        app:actionLayout="@layout/action_view_switch"
+        android:title="Night mode" />
+</menu>

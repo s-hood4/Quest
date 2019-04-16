@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="?feedBackground"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        style="?feedBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            style="?feedBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:id="@+id/rlUserHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                style="?feedBackground"
+                app:layout_collapseMode="parallax" >
+
+                <ImageView
+                    android:id="@+id/ivBackgroundImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    style="?feedBackground"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/backdrop"
+                    app:layout_collapseMode="parallax" />
+
+                <ImageView
+                    android:id="@+id/ivProfileImage"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginStart="15dp"
+                    android:adjustViewBounds="true"
+                    tools:src="@drawable/quest" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/svReviews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            style="?feedBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/layoutBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?feedBackground" >
+
+                <com.codepath.project.android.views.QuestTextView
+                    android:id="@+id/tvUserFirstName"
+                    android:transitionName="tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="15dp"
+                    android:paddingTop="20dp"
+                    style="?textSubheader"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    tools:text="Sandeep Raveesh" />
+
+                <com.codepath.project.android.views.QuestTextView
+                    android:id="@+id/followUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTint="@color/colorGray"
+                    android:drawableTop="@drawable/ic_person_add_black_24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="30dp"
+                    android:paddingTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/follow"
+                    android:fontFamily="sans-serif-light"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:textColor="@color/colorGray" />
+
+                <com.codepath.project.android.views.QuestTextView
+                    android:id="@+id/tvAboutMe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/tvUserFirstName"
+                    android:layout_below="@+id/tvUserFirstName"
+                    android:layout_marginEnd="15dp"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/default_about_me"
+                    style="?textRegular" />
+
+                <com.codepath.project.android.views.QuestTextView
+                    android:id="@+id/tvFollowing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/tvUserFirstName"
+                    android:layout_below="@+id/tvAboutMe"
+                    android:layout_marginBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textSize="16sp"
+                    style="?textSubheader"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-light"
+                    tools:text="200" />
+
+                <com.codepath.project.android.views.QuestTextView
+                    android:id="@+id/tvFollowingLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvAboutMe"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@id/tvFollowing"
+                    android:layout_alignBaseline="@id/tvFollowing"
+                    android:paddingTop="10dp"
+                    android:layout_marginStart="5dp"
+                    android:textSize="13sp"
+                    style="?textSubheader"
+                    android:fontFamily="sans-serif-light"
+                    android:text="FOLLOWING" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/primerdivisor"
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                style="?feedDivider" />
+
+            <android.support.v7.widget.RecyclerView
+                style="?feedBackground"
+                android:id="@+id/rvUserTimeline"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

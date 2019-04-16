@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        app:theme="@style/ToolbarColoredBackArrow"
+        android:titleTextColor="@color/white"
+        style="@style/custom_toolbar"
+        android:background="@color/colorPrimary"/>
+
+    <com.jjoe64.graphview.GraphView
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/plot_height"
+        android:layout_margin="20dp"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/graph" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="@dimen/plot_rl_margin"
+        android:id="@+id/rl1"
+        android:layout_below="@id/graph">
+
+        <com.codepath.project.android.views.QuestTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/plot_tv_main_size"
+            android:textColor="@color/white"
+            android:text="-4.00%"
+             android:id="@+id/percent_change"/>
+        <com.codepath.project.android.views.QuestTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/percent_change"
+            android:textSize="@dimen/plot_tv_tag_size"
+            android:text="Percent Change"
+            android:layout_marginTop="@dimen/plot_tv_tag_top_margin"
+            android:textColor="@color/action_gray"
+            android:id="@+id/percent_change_tag"/>
+
+        <com.codepath.project.android.views.QuestTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/plot_tv_main_size"
+            android:textColor="@color/white"
+            android:text="0.0087"
+            android:textStyle="bold"
+            android:id="@+id/current_price"/>
+        <com.codepath.project.android.views.QuestTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Current Price"
+            android:textSize="@dimen/plot_tv_tag_size"
+            android:layout_marginTop="@dimen/plot_tv_tag_top_margin"
+            android:textColor="@color/action_gray"
+            android:layout_below="@id/current_price"
+            android:id="@+id/current_price_tag"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@id/rl1"
+        android:layout_marginTop="@dimen/plot_line_margin"
+        android:layout_marginBottom="@dimen/plot_line_margin"
+        android:layout_marginRight="@dimen/plot_rl_margin"
+        android:layout_marginLeft="@dimen/plot_rl_margin"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:id="@+id/line"
+        android:orientation="horizontal"
+        android:background="@color/action_gray"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/plot_rl_margin"
+        android:layout_below="@id/line">
+        <com.codepath.project.android.views.QuestTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/plot_tv_main_size"
+            android:textColor="@color/white"
+            android:text="0.0087"
+            android:id="@+id/lowest_price"/>
+        <com.codepath.project.android.views.QuestTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/lowest_price"
+            android:textSize="@dimen/plot_tv_tag_size"
+            android:text="Lowest Price"
+            android:layout_marginTop="@dimen/plot_tv_tag_top_margin"
+            android:textColor="@color/action_gray"
+            android:id="@+id/lowest_price_tag"/>
+
+        <com.codepath.project.android.views.QuestTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/plot_tv_main_size"
+            android:textColor="@color/white"
+            android:text="0.0091"
+            android:id="@+id/highest_price"/>
+        <com.codepath.project.android.views.QuestTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Highest Price"
+            android:fontFamily="sans-serif-light"
+            android:textSize="@dimen/plot_tv_tag_size"
+            android:layout_marginTop="@dimen/plot_tv_tag_top_margin"
+            android:textColor="@color/action_gray"
+            android:layout_below="@id/highest_price"
+            android:id="@+id/highest_price_tag"/>
+    </RelativeLayout>
+</RelativeLayout>

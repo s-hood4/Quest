@@ -1,0 +1,49 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">170dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="rv_home_height">170dp</dimen>
+    <dimen name="rv_home_item_width">160dp</dimen>
+    <dimen name="rv_home_item_padding">0.75dp</dimen>
+    <dimen name="rv_home_item_margin">8dp</dimen>
+    <dimen name="rv_home_item_iv_height">160dp</dimen>
+    <dimen name="rv_home_item_tv_size">15sp</dimen>
+    <dimen name="home_tv_size">20sp</dimen>
+    <dimen name="home_rv_category_margin">5dp</dimen>
+    <dimen name="tv_home_top_margin">35dp</dimen>
+    <dimen name="tv_home_bottom_margin">10dp</dimen>
+    <dimen name="tv_home_left_margin">10dp</dimen>
+    <dimen name="tv_home_left_padding">10dp</dimen>
+
+    <dimen name="detail_backdrop_height">256dp</dimen>
+    <dimen name="card_margin">16dp</dimen>
+    <dimen name="list_item_avatar_size">40dp</dimen>
+
+    <dimen name="category_item_margin">8dp</dimen>
+    <dimen name="category_item_iv_height">160dp</dimen>
+    <dimen name="category_item_iv_width">160dp</dimen>
+    <dimen name="category_item_tv_padding">10dp</dimen>
+    <dimen name="category_item_tv_size">17sp</dimen>
+
+    <dimen name="category_detail_card_height">220dp</dimen>
+    <dimen name="category_detail_card_width">190dp</dimen>
+    <dimen name="rv_review_item_padding">20dp</dimen>
+
+    <dimen name="plot_height">230dp</dimen>
+    <dimen name="plot_tv_main_size">18sp</dimen>
+    <dimen name="plot_tv_tag_size">14sp</dimen>
+    <dimen name="plot_tv_tag_top_margin">3dp</dimen>
+    <dimen name="plot_rl_margin">25dp</dimen>
+    <dimen name="plot_line_margin">1dp</dimen>
+
+    <dimen name="feed_left_margin">15dp</dimen>
+
+    <dimen name="product_margin">25dp</dimen>
+
+    <dimen name="feed_divider">10dp</dimen>
+
+    <integer name="animation_duration">400</integer>
+</resources>

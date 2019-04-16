@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="?pageBackground"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.codepath.project.android.activities.DetailedReviewActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        app:theme="@style/ToolbarColoredBackArrow"
+        android:titleTextColor="@color/white"
+        style="@style/custom_toolbar"
+        android:background="@color/colorPrimary">
+        <com.codepath.project.android.views.QuestTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:singleLine="true"
+            android:id="@+id/toolbar_title" />
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="20dp"
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivProfile"
+        android:transitionName="ivProfile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginTop="7dp"
+        tools:src="@drawable/quest"
+        android:contentDescription="@string/user_profile_image" />
+
+        <com.codepath.project.android.views.QuestTextView
+        android:id="@+id/tvUserName"
+        android:layout_toEndOf="@+id/ivProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:textSize="17sp"
+        android:fontFamily="sans-serif-light"
+        style="?textSubheader"
+        tools:text="sandeep"/>
+
+    <RatingBar
+        android:id="@+id/rating"
+        android:transitionName="rating"
+        android:layout_below="@+id/tvUserName"
+        android:layout_toEndOf="@+id/ivProfile"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:numStars="5"
+        style="?android:attr/ratingBarStyleSmall"
+        android:stepSize="1"
+        android:theme="@style/ratingBar"/>
+
+        <com.codepath.project.android.views.QuestTextView
+        android:id="@+id/tvReview"
+        android:transitionName="tvReview"
+        android:layout_below="@+id/ivProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="sans-serif-light"
+        android:ellipsize="end"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        style="?textRegular"
+        android:maxLines="4"
+        android:textSize="16sp"
+        tools:text="This is an awesome phone dasdsadsa dsadas dasd asdasdasd asdas das da d sad sda das d sad asd sa d asddasdasdasddwqjknjksdnvsfjkkfjdsfndsjknfkjnsdkjnfsdjksnfjksd" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_below="@id/tvReview"
+        android:id="@+id/rvReviewImage">
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/line7"
+        android:layout_below="@id/rvReviewImage"
+        style="@style/product_detail_line_separator"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"/>
+
+        <com.like.LikeButton
+        app:icon_type="thumb"
+        app:icon_size="20dp"
+        app:anim_scale_factor="3"
+        android:id="@+id/button"
+        android:layout_below="@+id/line7"
+        android:layout_alignParentStart="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+        <com.codepath.project.android.views.QuestTextView
+        android:id="@+id/tvLikeCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line7"
+        android:layout_toEndOf="@+id/button"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        style="?textSubheader"
+        android:fontFamily="sans-serif-light"
+        tools:text="0 people like this"/>
+    </RelativeLayout>
+</RelativeLayout>

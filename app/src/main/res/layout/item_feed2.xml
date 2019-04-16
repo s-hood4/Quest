@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingPrefix"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/llheader"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/feed_left_margin"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="@dimen/feed_left_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginTop="7dp"
+            tools:src="@drawable/quest"
+            android:contentDescription="@string/user_profile_image" />
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_toEndOf="@+id/ivProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"
+            tools:text="sandeep"/>
+        <TextView
+            android:id="@+id/tvUserAction"
+            android:layout_toEndOf="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"
+            tools:text="sandeep"/>
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/ivProfile"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/tvUserName"
+            android:layout_marginTop="1dp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/colorLightGray3"
+            tools:text="10m"/>
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tvProductName"
+        android:layout_below="@+id/llheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/feed_left_margin"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/black"
+        tools:text="sandeep"/>
+
+    <RatingBar
+        android:id="@+id/rating"
+        android:layout_below="@+id/tvProductName"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="@dimen/feed_left_margin"
+        android:numStars="5"
+        style="?android:attr/ratingBarStyleSmall"
+        android:stepSize="1"
+        android:theme="@style/ratingBar"/>
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_marginStart="@dimen/feed_left_margin"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rating"
+        android:textColor="@android:color/black"
+        android:fontFamily="sans-serif-light"
+        android:textSize="16sp"
+        tools:text="This is an awesome phone dasdsadsa dsadas dasd asdasdasd asdas das da d sad sda das d sad asd sa d asddasdasdasddwqjknjksdnvsfjkkfjdsfndsjknfkjnsdkjnfsdjksnfjksd" />
+
+    <ImageView
+        android:id="@+id/ivProductImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="200dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:layout_below="@+id/tvContent"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="20dp"
+        tools:src="@drawable/quest"
+        android:contentDescription="@string/user_profile_image" />
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Quest</string>
+
+    <string name="copyright">Copyright &#169; Codepath Project</string>
+    <string name="title_activity_home">Quest</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="popular_categories">Top categories</string>
+    <string name="popular_products">Popular products</string>
+    <string name="popular_reviews">Best rated products</string>
+    <string name="product_image">product image</string>
+    <string name="add_to_shelf">Add to shelf</string>
+    <string name="add_to_wishlist">Add to wishlist</string>
+    <string name="reviews">Reviews</string>
+    <string name="click_to_cancel">click to cancel</string>
+    <string name="add_your_review">Add your review</string>
+    <string name="submit">Submit</string>
+    <string name="click_to_add_pics">click to add pics</string>
+
+    <string name="report_prices">Report Prices</string>
+    <string name="add_price">Report Price</string>
+    <string name="submit_price">Enter a Price to Submit</string>
+
+    <string name="facebook_app_id">751597271644941</string>
+
+    <string name="gcm_sender_id">id:973820282562</string>
+
+    <string name="default_greeting">Hello</string>
+    <string name="click_to_more">click to more</string>
+    <string name="user_profile_image">user profile image</string>
+    <string name="contact_friend">contact friend</string>
+    <string name="follow">Follow</string>
+    <string name="shelf">Shelf</string>
+    <string name="watch">Watch</string>
+    <string name="trends">Trends</string>
+    <string name="owned_by_your_friends">Owned by your friends</string>
+    <string name="product_videos">Product videos</string>
+
+    <string name="default_about_me">I am a techie with interest in cameras particularly. I am a big photography nerd who generally takes pictures of camera\'s using camera\'s (Inception in its own way)</string>
+    <string name="recommended_products">Recommended products</string>
+
+    <string-array name="theme_array">
+        <item>Default</item>
+        <item>Night-Mode</item>
+    </string-array>
+</resources>

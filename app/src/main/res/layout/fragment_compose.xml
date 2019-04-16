@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    style="?pageBackground">
+
+    <ImageView
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/ivComposeCancel"
+        android:tint="@color/colorPrimary"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_clear_black_24dp"
+        android:contentDescription="@string/click_to_cancel" />
+
+    <LinearLayout
+        android:id="@+id/llEditor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/ivComposeCancel"
+        android:layout_above="@+id/ivCamera"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="100dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop"
+                android:id="@+id/ivProductImage"/>
+            <com.codepath.project.android.views.QuestTextView
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/ivProductImage"
+                style="?textSubheader"
+                android:textSize="16dp"
+                android:id="@+id/tvProductName"/>
+
+            <RatingBar
+                android:id="@+id/rbAverageRating"
+                android:theme="@style/ratingBar"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/ivProductImage"
+                android:layout_below="@id/tvProductName"
+                android:numStars="5"
+                android:stepSize="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:isIndicator="false"
+                android:clickable="true"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/line"
+            android:background="@color/colorLightGray3"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="0.5dp"
+            android:orientation="horizontal"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etReviewText"
+            android:gravity="start"
+            android:lines="2"
+            android:textColorHint="#C8C8C8"
+            android:hint="@string/add_your_review"
+            style="?textSubheader"
+            android:textSize="19sp"
+            android:fontFamily="sans-serif-light"
+            android:inputType="textCapWords|textCapSentences"
+            android:layout_margin="5dp"
+            android:background="@android:color/transparent" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvCapturedImages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="80dp"
+        android:src="@drawable/ic_gallery"
+        android:tint="@color/colorGray"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/btnPost"
+        android:id="@+id/ivGallery"
+        android:contentDescription="@string/click_to_add_pics" />
+
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_add_a_photo_black_24dp"
+        android:tint="@color/colorGray"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/btnPost"
+        android:id="@+id/ivCamera"
+        android:contentDescription="@string/click_to_add_pics" />
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/submit"
+        android:layout_marginBottom="5dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_corner"
+        android:clickable="true"
+        android:enabled="false"
+        android:id="@+id/btnPost" />
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:background="@color/action_gray"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/btnPost"
+        android:layout_height="0.5dp"
+        android:orientation="horizontal"/>
+</RelativeLayout>

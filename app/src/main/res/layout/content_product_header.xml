@@ -1,0 +1,156 @@
+<RelativeLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <com.codepath.project.android.views.QuestTextView
+        android:id="@+id/tvProductName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold"
+        android:paddingLeft = "@dimen/product_margin"
+        android:paddingRight = "@dimen/product_margin"
+        android:paddingTop = "15dp"
+        android:paddingBottom = "5dp"
+        android:fontFamily="sans-serif-light"
+        style="?textSubheader"
+        tools:text="Samsung Galaxy S7" />
+    <com.codepath.project.android.views.QuestTextView
+        android:id="@+id/tvBrandName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvProductName"
+        android:layout_marginLeft="@dimen/product_margin"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textAllCaps="true"
+        android:textSize="14sp"
+        tools:text="Samsung" />
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_below="@id/tvBrandName"
+        style="@style/product_detail_line_separator"/>
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line2"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <com.codepath.project.android.views.QuestTextView
+            android:id="@+id/tvFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:drawableTint="@color/colorLightGray3"
+            android:drawableTop="@drawable/noun_729141_cc"
+            android:gravity="center"
+            android:text="@string/follow"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/colorGray" />
+
+        <com.codepath.project.android.views.QuestTextView
+            android:id="@+id/tvShelf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:drawableTint="@color/colorLightGray3"
+            android:drawableTop="@drawable/shelf"
+            android:gravity="center"
+            android:text="@string/shelf"
+            android:fontFamily="sans-serif-light"
+            style="?textRegular" />
+
+        <com.codepath.project.android.views.QuestTextView
+            android:id="@+id/tvWatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:drawableTint="@color/colorLightGray3"
+            android:drawableTop="@drawable/eye"
+            android:gravity="center"
+            android:text="@string/watch"
+            android:fontFamily="sans-serif-light"
+            style="?textRegular" />
+
+        <com.codepath.project.android.views.QuestTextView
+            android:id="@+id/tvPlots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:drawableTint="@color/colorLightGray3"
+            android:drawableTop="@drawable/plot"
+            android:gravity="center"
+            android:onClick="onShowPlot"
+            android:text="@string/trends"
+            android:fontFamily="sans-serif-light"
+            style="?textRegular"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/line3"
+        android:layout_below="@id/ll"
+        android:layout_marginBottom="5dp"
+        style="@style/product_detail_line_separator"/>
+    <com.codepath.project.android.views.QuestTextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line3"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/product_margin"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-light"
+        style="?textSubheader"
+        android:textStyle="bold"
+        tools:text="$85" />
+    <RatingBar
+        android:id="@+id/rbAverageRating"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPrice"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="@dimen/product_margin"
+        android:numStars="5"
+        android:stepSize="0.5"
+        android:theme="@style/ratingBar"
+        tools:rating="3.5" />
+    <com.codepath.project.android.views.QuestTextView
+        android:id="@+id/tvReviewCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPrice"
+        android:layout_toEndOf="@+id/rbAverageRating"
+        style="?textSubheader"
+        android:layout_marginStart="5dp"
+        android:paddingTop="5dp"
+        android:textSize="13sp"
+        android:fontFamily="sans-serif-light"
+        tools:text="(595)" />
+    <com.codepath.project.android.views.QuestTextView
+        android:id="@+id/tvAddPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/line3"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/product_margin"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:onClick="addPrice"
+        android:padding="10dp"
+        android:text="@string/add_price"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+</RelativeLayout>

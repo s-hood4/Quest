@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Theme.Material_Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="pageBackground">@style/page_background_wh</item>
+        <item name="cvBackground">@style/cv_background_wh</item>
+        <item name="appbarBackground">@style/appbar_background_wh</item>
+        <item name="catBackground">@style/cat_background_wh</item>
+        <item name="feedBackground">@style/feed_background_wh</item>
+        <item name="likeDivider">@style/divider_wh</item>
+        <item name="feedDivider">@style/feed_divider_wh</item>
+        <item name="navBackground">@style/nav_background_wh</item>
+        <item name="textSubheader">@style/text_subheader_wh</item>
+        <item name="textLarge">@style/text_large_wh</item>
+        <item name="textRegular">@style/text_regular_wh</item>
+        <item name="button">@style/button_wh</item>
+        <item name="priceColor">@style/price_wh</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="Theme.Night_Mode" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="pageBackground">@style/page_background_nm</item>
+        <item name="cvBackground">@style/cv_background_nm</item>
+        <item name="appbarBackground">@style/appbar_background_nm</item>
+        <item name="catBackground">@style/cat_background_nm</item>
+        <item name="feedBackground">@style/feed_background_nm</item>
+        <item name="likeDivider">@style/divider_nm</item>
+        <item name="feedDivider">@style/feed_divider_nm</item>
+        <item name="navBackground">@style/nav_background_nm</item>
+        <item name="textSubheader">@style/text_subheader_nm</item>
+        <item name="textLarge">@style/text_large_nm</item>
+        <item name="textRegular">@style/text_regular_nm</item>
+        <item name="button">@style/button_nm</item>
+        <item name="priceColor">@style/price_nm</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+</resources>
